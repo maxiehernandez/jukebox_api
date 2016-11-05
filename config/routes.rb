@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  # root to: 'albums#index'
+  root to: 'albums#index'
   get '/albums' => 'albums#index'
   get '/songs' => 'songs#index'
 
