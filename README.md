@@ -11,7 +11,7 @@ The API is two parts:
 ⋅⋅ https://gentle-wave-81371.herokuapp.com/albums
 
 ⋅⋅ Returns JSON object array:
-```
+<pre lang="no-highlight"><code>
 ⋅⋅⋅⋅ Fields:
 ⋅⋅⋅⋅⋅⋅- id:
 ⋅⋅⋅⋅⋅⋅⋅⋅Description: identifier of the album
@@ -25,7 +25,7 @@ The API is two parts:
 ⋅⋅⋅⋅⋅⋅-cover_photo_url:
 ⋅⋅⋅⋅⋅⋅⋅⋅Description: URL link to cover photo
 ⋅⋅⋅⋅⋅⋅⋅⋅Type: String
-```
+</code></pre>
 
 2. Songs
 ⋅⋅ This provides a list of songs for a specific album.
@@ -37,7 +37,7 @@ The API is two parts:
 ⋅⋅ album_id(integer)
 
 ⋅⋅ Returns JSON object array:
-```
+<pre lang="no-highlight"><code>
 ⋅⋅⋅⋅ Fields:
 ⋅⋅⋅⋅⋅⋅- id:
 ⋅⋅⋅⋅⋅⋅⋅⋅Description: identifier of the song
@@ -57,4 +57,4 @@ The API is two parts:
 ⋅⋅⋅⋅⋅⋅- song_duration:
 ⋅⋅⋅⋅⋅⋅⋅⋅Description: Length of the song in time (MM:SS)
 ⋅⋅⋅⋅⋅⋅⋅⋅Type: String
-```
+</code></pre>
