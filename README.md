@@ -1,24 +1,60 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This API was created to use for a jukebox web app. You can view the jukebox utilizing this API with this link: http://jukebox-haku.herokuapp.com/
 
-Things you may want to cover:
+The API is two parts:
 
-* Ruby version
+1. Albums
+⋅⋅ This provides a JSON array of albums available.
 
-* System dependencies
+⋅⋅ API URL:
+⋅⋅ https://gentle-wave-81371.herokuapp.com/albums
 
-* Configuration
+⋅⋅ Returns JSON object array:
+```
+⋅⋅⋅⋅ Fields:
+⋅⋅⋅⋅⋅⋅- id:
+⋅⋅⋅⋅⋅⋅⋅⋅Description: identifier of the album
+⋅⋅⋅⋅⋅⋅⋅⋅Type: Integer
+⋅⋅⋅⋅⋅⋅- name:
+⋅⋅⋅⋅⋅⋅⋅⋅Description: Name of the Album
+⋅⋅⋅⋅⋅⋅⋅⋅Type: String
+⋅⋅⋅⋅⋅⋅-artist_name:
+⋅⋅⋅⋅⋅⋅⋅⋅Description: Artist Name of the Album
+⋅⋅⋅⋅⋅⋅⋅⋅Type: String
+⋅⋅⋅⋅⋅⋅-cover_photo_url:
+⋅⋅⋅⋅⋅⋅⋅⋅Description: URL link to cover photo
+⋅⋅⋅⋅⋅⋅⋅⋅Type: String
+```
 
-* Database creation
+2. Songs
+⋅⋅ This provides a list of songs for a specific album.
 
-* Database initialization
+⋅⋅ API URL:
+⋅⋅ https://gentle-wave-81371.herokuapp.com/songs.json?album_id=1
 
-* How to run the test suite
+⋅⋅ Input Parameter:
+⋅⋅ album_id(integer)
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+⋅⋅ Returns JSON object array:
+```
+⋅⋅⋅⋅ Fields:
+⋅⋅⋅⋅⋅⋅- id:
+⋅⋅⋅⋅⋅⋅⋅⋅Description: identifier of the song
+⋅⋅⋅⋅⋅⋅⋅⋅Type: Integer
+⋅⋅⋅⋅⋅⋅- album_id:
+⋅⋅⋅⋅⋅⋅⋅⋅Description: Album identifier
+⋅⋅⋅⋅⋅⋅⋅⋅Type: Integer
+⋅⋅⋅⋅⋅⋅- song_name:
+⋅⋅⋅⋅⋅⋅⋅⋅Description: Name of the Song
+⋅⋅⋅⋅⋅⋅⋅⋅Type: String
+⋅⋅⋅⋅⋅⋅- song_order:
+⋅⋅⋅⋅⋅⋅⋅⋅Description: Display sort order of the songs
+⋅⋅⋅⋅⋅⋅⋅⋅Type: Integer
+⋅⋅⋅⋅⋅⋅- song_label:
+⋅⋅⋅⋅⋅⋅⋅⋅Description: Song categories
+⋅⋅⋅⋅⋅⋅⋅⋅Type: array of strings
+⋅⋅⋅⋅⋅⋅- song_duration:
+⋅⋅⋅⋅⋅⋅⋅⋅Description: Length of the song in time (MM:SS)
+⋅⋅⋅⋅⋅⋅⋅⋅Type: String
+```
