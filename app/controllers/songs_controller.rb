@@ -5,7 +5,7 @@ class SongsController < ApplicationController
   end
 
   def favorite
-    song = Song.find_by_id(params[:song_id].to_i)
+    song = Song.find_by_id(params[:id].to_i)
     song.update!(favorite: params[:favorite])
     song.save!
     render json: 200, content_type: 'application/json'
