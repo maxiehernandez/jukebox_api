@@ -67,4 +67,30 @@ Fields:
 * song_duration:
     * Description: Length of the song in time (MM:SS)
     * Type: String
+* favorite:
+    * Description: identifies if a song has been favorited
+    * Type: Boolean
 </code></pre>
+
+
+<br><br>
+
+
+<h2> OVERVIEW: </h2>
+<ul>
+  <li>Models</li>
+    <ul>
+      <li>Create two models, one for songs and one for albums. These two models will have polymorphic associations:</li>
+        <ul>
+          <li>Album has_many :songs</li>
+        </ul>
+        <ul>
+          <li>Song belongs_to :album</li>
+        </ul>
+      <li>The song model has a favorite attribute that will allow songs to be saved as a favorite.</li>
+    </ul>
+  <li>Controllers</li>
+    <ul>
+      <li>Create two controllers that will render the songs and albums attributes in JSON.</li>
+    </ul>
+</ul>

@@ -3,8 +3,4 @@ class AlbumsController < ApplicationController
     albums = Album.all
     render json: albums, :only => [:id, :name, :artist_name, :cover_photo_url], content_type: 'application/json'
   end
-
-  def show
-
-  end
 end
