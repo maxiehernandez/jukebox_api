@@ -1,6 +1,6 @@
 # README
 
-This API was created to use for a jukebox web app. You can view the jukebox utilizing this API with this link: http://jukebox-haku.herokuapp.com/
+This API was created to use for a jukebox web app. You can view the jukebox utilizing this API with this link: jukebox-simulation.herokuapp.com
 
 ----
 The API is two parts:
