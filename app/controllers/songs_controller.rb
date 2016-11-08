@@ -6,8 +6,9 @@ class SongsController < ApplicationController
 
   def favorite
     song = Song.find_by_id(params[:id].to_i)
-    song.update!(favorite: params[:favorite])
-    song.save!
-    render json: 200, content_type: 'application/json'
+    favorite = params["favorite"] == "true" ? true : false
+    song.update(favorite: favorite)
+    tooltip = song.favorite ? 'Unfavorite' : 'Mark as favorite'
+    render json: { status: 200, content_type: 'application/json', tooltip: tooltip } 
   end
 end
